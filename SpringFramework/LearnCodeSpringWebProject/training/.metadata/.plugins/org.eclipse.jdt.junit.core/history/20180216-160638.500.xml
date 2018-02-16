@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BoardDAOTest" project="ex01" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="org.zerock.controller.BoardDAOTest" time="0.359">
+    <testcase name="testURI" classname="org.zerock.controller.BoardDAOTest" time="0.005"/>
+    <testcase name="testRead" classname="org.zerock.controller.BoardDAOTest" time="0.001"/>
+    <testcase name="testListCriteria" classname="org.zerock.controller.BoardDAOTest" time="0.117"/>
+    <testcase name="testCreate" classname="org.zerock.controller.BoardDAOTest" time="0.101"/>
+    <testcase name="testDelete" classname="org.zerock.controller.BoardDAOTest" time="0.043"/>
+    <testcase name="testUpdate" classname="org.zerock.controller.BoardDAOTest" time="0.043"/>
+    <testcase name="testListPage" classname="org.zerock.controller.BoardDAOTest" time="0.049"/>
+  </testsuite>
+</testrun>

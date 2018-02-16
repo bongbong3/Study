@@ -1,0 +1,9 @@
+package org.zerock.persistence;
+
+public interface MemberVO {
+	
+	public String getTime();
+	
+	public void insertMember()
+
+}
