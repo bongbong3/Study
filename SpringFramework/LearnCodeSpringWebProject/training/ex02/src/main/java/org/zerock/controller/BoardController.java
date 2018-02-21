@@ -22,7 +22,7 @@ public class BoardController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 	
-	/*
+	
 	@Inject	
 	private BoardService service;
 	
@@ -145,6 +145,6 @@ public class BoardController {
 		
 		return "redirect:/board/listPage";
 	}
-	*/
+	
 	
 }

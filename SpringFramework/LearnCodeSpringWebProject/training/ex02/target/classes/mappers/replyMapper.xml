@@ -22,15 +22,32 @@
 	</insert>
 	
 	<update id="update">
-		UPDATE tbl_reply 
+		UPDATE book_ex.tbl_reply 
 		SET	   replytext = #{replytext}
 			 , updatedate = now()
 		WHERE rno = #{rno}	
 	</update>
 	
 	<delete id="delete">
-		DELETE FROM tbl_reply
+		DELETE FROM book_ex.tbl_reply
 		WHERE rno = #{rno}
 	</delete>
+	
+	<!-- 페이징 처리를 위해 -->
+	<select id="listPage" resultType="ReplyVO">
+		SELECT
+				*
+		FROM	book_ex.tbl_reply
+		WHERE 	bno = #{bno}
+		ORDER BY rno DESC
+		OFFSET #{cri.pageStart} LIMIT #{cri.perPageNum}
+	</select>
+	
+	<!-- 페이지 수를 계산하기 위해 -->
+	<select id="count" resultType="int">
+		SELECT 	COUNT(bno)
+		FROM 	book_ex.tbl_reply
+		WHERE	bno = #{bno}
+	</select>
 
 </mapper>
