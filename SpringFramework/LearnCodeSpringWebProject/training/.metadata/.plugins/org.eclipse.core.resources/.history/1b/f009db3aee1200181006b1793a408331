@@ -1,7 +1,0 @@
-package org.zerock.domain.SearchCriteria;
-
-import org.zerock.domain.Criteria;
-
-public class SearchCriteria extends Criteria {
-
-}

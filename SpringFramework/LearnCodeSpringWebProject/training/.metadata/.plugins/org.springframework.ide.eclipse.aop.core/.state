@@ -2,5 +2,10 @@
 <aop-reference-model>
 <aop-project name="ex00"/>
 <aop-project name="ex01"/>
-<aop-project name="ex02"/>
+<aop-project name="ex02">
+<aspect-definition advice-class-name="org.zerock.aop.SampleAdvice" advice-method-name="startLog(org.aspectj.lang.JoinPoint)" advice-type="BEFORE" aspect-end-line-number="34" aspect-name="sampleAdvice" aspect-start-line-number="34" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/ex02/src/main/webapp/WEB-INF/spring/root-context.xml" pointcut-expression="execution(* org.zerock.service.MessageService*.*(..))" proxy-target-class="false">
+<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:ex02|3:src/main/webapp/WEB-INF/spring/root-context.xml|7:beans:12|8:messageServiceImpl:12" bean-file="/ex02/src/main/webapp/WEB-INF/spring/root-context.xml" bean-start-line="12" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/ex02/src/main/webapp/WEB-INF/spring/root-context.xml" source="=ex02/src\/main\/java&lt;org.zerock.aop{SampleAdvice.java[SampleAdvice~startLog~QJoinPoint;" source-start-line="20" target="=ex02/src\/main\/java&lt;org.zerock.service{MessageServiceImpl.java[MessageServiceImpl~readMessage~QString;~QInteger;" target-start-line="26"/>
+<aop-reference advice-type="BEFORE" bean="1:BeansModel|2:ex02|3:src/main/webapp/WEB-INF/spring/root-context.xml|7:beans:12|8:messageServiceImpl:12" bean-file="/ex02/src/main/webapp/WEB-INF/spring/root-context.xml" bean-start-line="12" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/ex02/src/main/webapp/WEB-INF/spring/root-context.xml" source="=ex02/src\/main\/java&lt;org.zerock.aop{SampleAdvice.java[SampleAdvice~startLog~QJoinPoint;" source-start-line="20" target="=ex02/src\/main\/java&lt;org.zerock.service{MessageServiceImpl.java[MessageServiceImpl~addMessage~QMessageVO;" target-start-line="20"/>
+</aspect-definition>
+</aop-project>
 </aop-reference-model>
