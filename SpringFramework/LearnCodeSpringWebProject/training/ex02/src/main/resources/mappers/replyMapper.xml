@@ -49,5 +49,11 @@
 		FROM 	book_ex.tbl_reply
 		WHERE	bno = #{bno}
 	</select>
+	
+	<select id="getBno" resultType="int">
+		select bno
+		from   book_ex.tbl_reply 
+		where  rno = #{rno}
+	</select>
 
 </mapper>
