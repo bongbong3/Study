@@ -34,7 +34,7 @@ parent.addFilePath(result);
 
 <h3>Ajax File Upload</h3>
 <div class="fileDrop"></div>
-<div class="uploadList"></div>
+<div class="uploadedList"></div>
 
 <script>
 	$(".fileDrop").on("dragenter dragover", function(event) {
@@ -64,8 +64,8 @@ parent.addFilePath(result);
 			success : function(data) {
 				var str = "";
 				alert(data);
-				/*
-				if (checkImageType(data)) {
+				
+				if (checkImageType(data)) {			
 					str = "<div><a href='displayFile?fileName=" + getImageLink(data) + "'>"
 							+ "<img src='displayFile?fileName=" + data + "'/>"
 							+ "</a><small data-src=" + data + ">X</small></div>";
@@ -76,7 +76,7 @@ parent.addFilePath(result);
 				}
 				
 				$(".uploadedList").append(str);
-				*/
+				
 			}
 		});
 		
@@ -93,12 +93,39 @@ parent.addFilePath(result);
 			dataType : "text",
 			success : function(result) {
 				if (result == "deleted") {
+					alert("삭제되었습니다.");
 					that.parent("div").remove();
 				}	
 			}
 		});
 		
-	});
+	});	
+	
+	function checkImageType(fileName) {
+		var pattern = /jpg|gif|png|jpeg/i;
+		
+		return fileName.match(pattern);
+	}
+	
+	function getOriginalName(fileName) {
+		if (checkImageType(fileName)) {
+			return;
+		}
+		
+		var idx = fileName.indexOf("_") + 1;
+		return fileName.substr(idx);
+	}
+	
+	function getImageLink(fileName) {
+		if (!checkImageType(fileName)) {
+			return;
+		}
+		
+		var front = fileName.substr(0, 12);
+		var end = fileName.substr(14);
+		
+		return front + end;
+	}
 </script>
 
 </body>
