@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.zerock.mapper.BoardMapper">
 
-	<insert id="create">
+	<insert id="create" useGeneratedKeys="true" keyProperty="bno" parameterType="org.zerock.domain.BoardVO">
 		insert into book_ex.tbl_board (title, content, writer)
 		values(#{title}, #{content}, #{writer})
 	</insert>
@@ -127,5 +127,23 @@
 		set    replycnt = replycnt + #{amount}
 		where  bno = #{bno}
 	</update>
+	
+	<insert id="addAttach">
+		insert into book_ex.tbl_attach(fullname, bno) 
+		values (#{fileName}, #{bno})
+	</insert>
+	
+	<select id="getAttach" resultType="string">
+		select fullname from book_ex.tbl_attach where bno = #{bno} order by regdate
+	</select>
+	
+	<delete id="deleteAttach">
+		delete from book_ex.tbl_attach where bno = #{bno}
+	</delete>
+	
+	<insert id="replaceAttach">
+		insert into book_ex.tbl_attach(fullname, bno)
+		values (#{fullName}, #{bno})
+	</insert>
 
 </mapper>
