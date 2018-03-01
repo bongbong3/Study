@@ -45,34 +45,44 @@
 					<input type='hidden' name='keyword' value="${cri.keyword}">
 
 				</form>
-
-				<div class="box-body">
-					<div class="form-group">
-						<label for="exampleInputEmail1">Title</label> <input type="text"
-							name='title' class="form-control" value="${boardVO.title}"
-							readonly="readonly">
-					</div>
-					<div class="form-group">
-						<label for="exampleInputPassword1">Content</label>
-						<textarea class="form-control" name="content" rows="3"
-							readonly="readonly">${boardVO.content}</textarea>
-					</div>
-					<div class="form-group">
-						<label for="exampleInputEmail1">Writer</label> <input type="text"
-							name="writer" class="form-control" value="${boardVO.writer}"
-							readonly="readonly">
-					</div>
-				</div>
-				<!-- /.box-body -->
 				
-<ul class="mailbox-attachments clearfix uploadedList"></ul>
-
-
- <div class="box-footer">
-   <button type="submit" class="btn btn-warning" id="modifyBtn">Modify</button>
-   <button type="submit" class="btn btn-danger" id="removeBtn">REMOVE</button>
-   <button type="submit" class="btn btn-primary" id="goListBtn">GO LIST </button>
- </div>
+				<c:if test="${not empty login }">
+					<div class="box-body">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Title</label> <input type="text"
+								name='title' class="form-control" value="${boardVO.title}"
+								readonly="readonly">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Content</label>
+							<textarea class="form-control" name="content" rows="3"
+								readonly="readonly">${boardVO.content}</textarea>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Writer</label> <input type="text"
+								name="writer" class="form-control" value="${boardVO.writer}"
+								readonly="readonly">
+						</div>
+					</div>
+					<!-- /.box-body -->
+					
+					<ul class="mailbox-attachments clearfix uploadedList"></ul>
+					
+					
+					 <div class="box-footer">
+					 	<c:if test="${login.uid == boardVO.writer }">
+						   <button type="submit" class="btn btn-warning" id="modifyBtn">Modify</button>
+						   <button type="submit" class="btn btn-danger" id="removeBtn">REMOVE</button>
+					   	</c:if>
+					   	<button type="submit" class="btn btn-primary" id="goListBtn">GO LIST </button>
+					 </div>
+ 				 </c:if>
+ 				 
+ 				 <c:if test="${empty login}">
+ 				 	<div class="box-body">
+ 				 		<div><a href="javascript:goLogin();">Login Please</a></div>
+ 				 	</div>
+ 				 </c:if>
 
 
 
@@ -176,13 +186,15 @@
 <i class="fa fa-comments bg-blue"></i>
  <div class="timeline-item" >
   <span class="time">
-    <i class="fa fa-clock-o"></i>{{prettifyDate regdate}}
+   	<i class="fa fa-clock-o"></i>{{prettifyDate regdate}}
   </span>
   <h3 class="timeline-header"><strong>{{rno}}</strong> -{{replyer}}</h3>
   <div class="timeline-body">{{replytext}} </div>
     <div class="timeline-footer">
+	 {{#eqReplyer replyer}}
      <a class="btn btn-primary btn-xs" 
 	    data-toggle="modal" data-target="#modifyModal">Modify</a>
+	 {{/eqReplyer}}
     </div>
   </div>			
 </li>
@@ -190,6 +202,14 @@
 </script>
 
 <script>
+	Handlebars.registerHelper("eqReplyer", function(replyer, block) {
+		var accum = '';
+		if (replyer == '${login.uid}') {
+			accum += block.fn();
+		}
+		return accum;
+	});
+
 	Handlebars.registerHelper("prettifyDate", function(timeValue) {
 		var dateObj = new Date(timeValue);
 		var year = dateObj.getFullYear();
