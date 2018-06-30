@@ -6987,3 +6987,13 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2018-03-01 12:22:03,803 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
 2018-03-01 12:22:03,804 [Worker-175] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-03-01 12:22:03,805 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:12:07,063 [Worker-199] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:12:07,139 [Worker-199] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2018-03-01 15:12:07,162 [Worker-199] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:12:07,163 [Worker-199] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 15:15:00,328 [Worker-210] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:15:00,330 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 9 resources
+2018-03-01 15:15:00,332 [Worker-210] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-03-01 15:15:00,332 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-03-01 17:54:04,715 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-03-01 17:58:22,197 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact aspectj:aspectjweaver:jar:1.5.4 has been relocated to org.aspectj:aspectjweaver:jar:1.5.4
