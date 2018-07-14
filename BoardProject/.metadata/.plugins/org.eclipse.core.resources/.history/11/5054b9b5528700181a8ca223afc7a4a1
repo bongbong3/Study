@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="postodo.aacii.mapper.loginMapper">
+
+	<select id="selectUserLogin"
+			parameterType="postodo.aacii.net.login.dto.LoginDto" 
+			resultType="java.util.List">
+		SELECT	USER_ID				AS USER_ID
+				, USER_PASSWORD		AS USER_PASSWORD
+				, CREATE_IP			AS CREATE_IP
+				, CREATE_TIME		AS CREATE_TIME
+				, UPDATE_IP			AS UPDATE_IP
+				, UPDATE_TIME		AS UPDATE_TIME
+				, DEL_YN			AS DEL_YN
+		FROM	POSTODO.USER
+		WHERE	DEL_YN = 'N'
+		AND		USER_ID = #{userId}
+		AND		USER_PASSWORD = #{userPassword}
+	</select>
+	
+</mapper>
