@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>로그인</title>
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="../css/mainboard.css" rel="stylesheet">
+<link href="../css/cardui.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Custom CSS -->
+<link href="../css/postodo.css" rel="stylesheet">
+</head>
+<body class="loginBody">
+
+<!-- middle page//S -->
+<div class="middlePageLogin">
+	<!-- page header//S -->
+	<div class="page-header">
+		<h1 class="logoLogin">Postodo <small>환영합니다!</small>&nbsp;&nbsp;<a href="../homepage/homepage.html" style="font-size: 12px; color: white;">홈페이지 구경하실래요?</a></h1>
+	</div>
+	<!-- page header//E -->
+	
+	<!-- panel//S -->
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h3 class="panel-title">로그인하세요.</h3>
+		</div>
+		
+		<!-- panel body//S -->
+		<div class="panel-body">
+			<div class="row">
+				<!-- col//S -->
+				<div class="col-md-5">
+					<a href="#"><img src="http://techulus.com/buttons/fb.png" /></a><br/>
+					<a href="#"><img src="http://techulus.com/buttons/tw.png"/></a><br/>
+					<a href="#"><img src="http://techulus.com/buttons/gplus.png"/></a>
+				</div>
+				<!-- col//E -->
+				
+				<!-- col-md-7//S -->
+				<div class="col-md-7" style="border-left:1px solid #ccc; height:160px;">
+					<form class="form-horizontal">
+						<fieldset>
+							<input id="textinput" name="textinput" type="text" placeholder="사용자 ID를 입력하세요." class="form-control input-md">
+							<div class="spacingLogin"><input type="checkbox" name="checkboxes" id="checkboxes-0" value="1"><small>ID 기억하기</small></div>
+							<input id="textinput" name="textinput" type="text" placeholder="사용자 비밀번호를 입력하세요." class="form-control input-md">
+							<div class="spacingLogin"><a href="#"><small>비밀번호를 잊어버리셨나요?</small></a><br/></div>
+							<button id="singlebutton" name="singlebutton" class="btn btn-info btn-sm pull-right">Sign In</button>
+						</fieldset>
+					</form>
+				</div>
+				<!-- col-md-7//E -->
+				
+			</div>
+		</div>
+		<!-- panel body//E -->
+		
+	</div>
+	<!-- panel//E -->
+	<p class="pLogin"><a href="#">About</a> AACII</p>
+</div>
+<!-- middle page//E -->
+
+</body>
+</html>   

@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";
+
+/* login form css - Start */
+.loginBody {
+	width: 100px;
+	height: 100px;
+	background: -webkit-linear-gradient(90deg, #41cac0 10%, #41cac0 90%); /* Chrome 10+, Saf5.1+ */
+  	background:    -moz-linear-gradient(90deg, #41cac0 10%, #41cac0 90%); /* FF3.6+ */
+  	background:     -ms-linear-gradient(90deg, #41cac0 10%, #41cac0 90%); /* IE10 */
+  	background:      -o-linear-gradient(90deg, #41cac0 10%, #41cac0 90%); /* Opera 11.10+ */
+  	background:         linear-gradient(90deg, #41cac0 10%, #41cac0 90%); /* W3C */
+  	font-family: 'Raleway', sans-serif;
+}
+
+.pLogin {
+	color: #ccc;
+}
+
+.spacingLogin {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.middlePageLogin {
+	width: 680px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.logoLogin {
+	color: #CCC;
+}
+
+/* login form css - End */
+
+/* regist form css - start */
+.registerBody { 
+	height: 1080px;	
+}
+
+.registerContainer {
+	height: 1000px;
+}
+
+.registerMain {
+	height: 920px;
+}
+
+.main {
+	margin: 50px 15px;	
+}
+
+h1.title {
+	font-size: 50px;
+	font-family: "Passion One", cursive;
+	font-weight: 400;
+}
+
+hr {
+	width: 10%;
+	color: #fff;
+}
+
+.form-group-register {
+	margin-bottom: 15px;
+}
+
+label {
+	margin-bottom: 15px;
+}
+
+ .form-control {
+	height: auto! important;
+	padding: 8px 12px !important;
+}
+
+.input-group {
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21)!important;
+	-moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21)!important;
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21)!important;
+}
+
+.registerEmpty {
+	width: 700px;
+	height: 180px;
+}
+
+.main-center-register {
+	margin-top: 30px;
+	margin: 0 auto;
+	max-width: 700px;
+	padding: 10px 40px;
+	background: #009edf;
+	color: #fff;
+	text-shadow: none;
+} 
+
+.control-label {
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* regist form css - end */
